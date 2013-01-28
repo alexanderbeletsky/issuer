@@ -1,0 +1,44 @@
+﻿body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+ul.issues-list {
+    list-style: none;
+}
+
+ul.issues-list li {
+    margin-bottom: 12px;
+}
+
+ul.issues-list span.id {
+    padding-left: 22px;
+}
+
+ul.issues-list span.headline {
+    font-weight: bold;
+    font-size: 17px;
+    padding-left: 36px;
+}
+
+ul.issues-list span.date {
+    font-size: small;
+    font-style: italic;
+}
+
+ul.issues-list form {
+    display: inline;
+}
+
+.center {
+    text-align: center;
+}
+
+.field-validation-error :before {
+    content: '* ';
+}
+
+.field-validation-error {
+    color: #b94a48;
+    display: block;
+}

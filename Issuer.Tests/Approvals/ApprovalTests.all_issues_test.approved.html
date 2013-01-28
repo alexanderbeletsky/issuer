@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head><base href="http://localhost:51989/issues">
+    <meta name="viewport" content="width=device-width" />
+    <title>title</title>
+    
+    <script src="/Scripts/jquery-1.4.4.js"></script>
+<script src="/Scripts/jquery.validate.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    <link href="/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/Content/bootstrap-responsive.css" rel="stylesheet"/>
+<link href="/Content/style.css" rel="stylesheet"/>
+
+    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+            <a href="/" class="brand">Issuer</a>
+                <div class="nav-collapse collapse pull-right">
+                    <ul class="nav">
+                        <li><a href="">Faq</a></li>
+                        <li><a href="">Account</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div id="app" class="row">
+            
+<ul class="issues-list">
+        <li class="alert alert-info">
+        
+<form action="/issues/delete/issues-1" method="post">                <button type="submit" class="close" data-dismiss="alert">Ã—</button>
+</form>        
+            <span class="id">1</span> 
+            <span class="headline"><a href="/issues/show/issues-1">12345</a></span> 
+            <span class="date pull-right">11/15/2012</span>
+        </li>
+</ul>
+<a href="/issues/Csv" class="btn pull-right">Export to CVS</a>
+        </div>
+        <hr/>
+        <footer>
+            Â© Sitecore 2012
+            
+        </footer>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@using Issuer.Infrastructure
+@model Issuer.Models.Issue
+
+@{
+    ViewBag.Title = "Issuer | New issue";
+}
+
+@using (Html.BeginForm())
+{
+    <legend>New issue</legend>
+    @Html.ValidationSummaryAlerts(ViewData.ModelState)
+    @Html.ValidationMessageFor(m => m.Headline)
+    @Html.ValidationMessageFor(m => m.Description)
+    @Html.ValidationMessageFor(m => m.CreatedAt)
+    
+    <div class="control-group">
+        @Html.LabelFor(m => m.Headline)
+        @Html.TextBoxFor(m => m.Headline)
+    </div>
+    <div class="control-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextAreaFor(m => m.Description, new { @class = "input-xxlarge", rows = "8" })
+    </div>
+    <div class="control-group">
+        @Html.LabelFor(m => m.CreatedAt)
+        @Html.DisplayFor(m => m.CreatedAt)
+        @Html.HiddenFor(m => m.CreatedAt)
+    </div>
+    
+    <button type="submit" class="btn">Create</button>
+}

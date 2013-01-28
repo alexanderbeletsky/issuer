@@ -1,0 +1,18 @@
+﻿@model Issuer.Models.Issue
+
+@{
+    ViewBag.Title = "Issuer | Issue";
+}
+
+<legend>Issue: @Model.GetNumericId() <small class="pull-right">created at: @Model.CreatedAt</small></legend>
+<div class="control-group">
+    @Html.LabelFor(m => m.Headline)
+    @Html.DisplayFor(m => m.Headline)
+</div>
+<div class="control-group">
+    @Html.LabelFor(m => m.Description)
+    @Html.DisplayFor(m => m.Description)
+</div>
+<div class="control-group pull-right">
+    @Html.ActionLink("Complete", "complete", new { id = Model.Id }, new { @class = "btn btn-info"})
+</div>

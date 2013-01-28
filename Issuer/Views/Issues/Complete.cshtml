@@ -1,0 +1,11 @@
+﻿@model Issuer.Models.Issue
+
+@{
+    ViewBag.Title = "Issuer | Complete issue";
+}
+
+@using (Html.BeginForm())
+{
+    <legend>Are you sure to complete  <strong>@Model.Id</strong>?</legend>
+    <button type="submit" class="btn">Complete</button>
+}

@@ -1,0 +1,24 @@
+﻿@model IList<Issuer.Models.Issue>
+
+@{
+    ViewBag.Title = "title";
+}
+<ul class="issues-list">
+    @foreach (var issue in Model)
+    {
+        var className = issue.Completed ? "alert-success" : "alert-info";
+
+        <li class="alert @className">
+        
+            @using (Html.BeginForm("delete", "issues", new {id = issue.Id}))
+            {
+                <button type="submit" class="close" data-dismiss="alert">×</button>
+            }
+        
+            <span class="id">@issue.GetNumericId()</span> 
+            <span class="headline">@Html.ActionLink(issue.Headline, "show", new {id = issue.Id})</span> 
+            <span class="date pull-right">@issue.CreatedAt.ToShortDateString()</span>
+        </li>
+    }
+</ul>
+<a href="@Url.Action("Csv")" class="btn pull-right">Export to CVS</a>

@@ -1,0 +1,43 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    @Scripts.Render("~/Scripts/js")
+    @Styles.Render("~/Content/bootstrap")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+            <a href="/" class="brand">Issuer</a>
+                <div class="nav-collapse collapse pull-right">
+                    <ul class="nav">
+                        <li><a href="">Faq</a></li>
+                        <li><a href="">Account</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div id="app" class="row">
+            @RenderBody()
+        </div>
+        <hr/>
+        <footer>
+            © Sitecore 2012
+            @RenderSection("Footer", false)
+        </footer>
+    </div>
+    
+</body>
+</html>
